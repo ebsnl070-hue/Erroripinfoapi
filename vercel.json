@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api-ipinfo.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/ipinfo",
+      "dest": "/api-ipinfo.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api-ipinfo.js"
+    }
+  ]
+}
